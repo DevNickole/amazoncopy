@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 60px 40px 1600px 1fr;
+  grid-template-columns: 1fr;
+  background-color: rgb(227, 230, 230);
+  position: absolute;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  background-color: rgb(19, 25, 33);
+  height: 60px;
+  padding: 5px 15px;
+  display: FLEX;
+  align-items: center;
+}
+header > span {
+  height: 100%;
+  color: white;
+  padding: 5px 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 8%;
+}
+.logo > img {
+  height: 100%;
+  width: 100%;
+}
+.location {
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  word-spacing: 2px;
+}
+.location > p {
+  margin-left: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(255, 255, 255, 0.5);
+}
+header > form {
+  height: 100%;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+header > span:hover {
+  border: 1px solid white;
+}
+form > select {
+  width: 50px;
+  height: 100%;
+  padding: 5px;
+  background-color: rgb(243, 243, 243);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+}
+form > input {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+}
+form > button {
+  height: 100%;
+  width: 50px;
+  border: none;
+  background-color: rgb(254, 189, 105);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.language {
+  width: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.language > h5 > i {
+  font-size: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.account {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.account > p {
+  font-size: 12px;
+}
+.orders {
+  width: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cart {
+  width: 5%;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.cart > i {
+  font-size: 25px;
+}
+
+nav {
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(35, 47, 62);
+  color: white;
+  height: 40px;
+  align-items: center;
+}
+main {
+  padding: 0px 45px;
+  position: relative;
+}
+.carosel-container {
+  position: relative;
+}
+.carosel-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(216, 12, 12, 0) 50%,
+    rgb(227, 230, 230) 100%
+  );
+  height: 100%;
+}
+main > .carosel-container > img {
+  width: 100%;
+}
+.carosel-container > button:nth-of-type(1) {
+  position: absolute;
+  left: 0;
+  height: 40%;
+  width: 5%;
+  background-color: transparent;
+  border: none;
+}
+.carosel-container > button:nth-of-type(2) {
+  position: absolute;
+  right: 0;
+  height: 40%;
+  width: 5%;
+  background-color: transparent;
+  border: none;
+}
+.carosel-container > button > i {
+  font-size: 300%;
+}
+.cards-container {
+  position: relative;
+  top: -300px;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 430px 430px 300px;
+  gap: 20px;
+}
+.cards-wrapper {
+  color: rgb(15, 17, 17);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  gap: 10px;
+}
+.cards-wrapper > a {
+  text-decoration: none;
+  color: rgb(119, 179, 190);
+}
+.cards-wrapper > img {
+  width: 100%;
+  height: 80%;
+  cursor: pointer;
+}
+.row3 {
+  grid-column: 1/5;
+  position: relative;
+}
+
+.carousel-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.row3 > button:nth-of-type(1) {
+  position: absolute;
+  height: 50%;
+  left: 0;
+  width: 5%;
+  background-color: rgb(255, 255, 255, 0.5);
+  border: none;
+  font-size: 200%;
+}
+.row3 > button:nth-of-type(2) {
+  position: absolute;
+  height: 50%;
+  right: 0;
+  width: 5%;
+  background-color: rgb(255, 255, 255, 0.5);
+  border: none;
+  font-size: 200%;
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 400px 110px 1fr;
+}
+footer > .backtotop {
+  background-color: rgb(55, 71, 90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backtotop > a {
+  color: white;
+}
+.backtotop:hover {
+  background-color: rgb(35, 47, 62, 0.8);
+}
+footer > .about {
+  background-color: rgb(35, 47, 62);
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  padding: 50px 0px;
+}
+a {
+  text-decoration: none;
+}
+.about > div > a {
+  color: rgb(255, 255, 255, 0.7);
+}
+.about > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about > div > a:hover {
+  text-decoration: underline;
+}
+.lang {
+  background-color: rgb(35, 47, 62);
+  border-top: 1px solid rgb(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+.lang > span {
+  border: 1px solid rgb(255, 254, 254, 0.4);
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: white;
+  cursor: default;
+}
+.lang > div > img {
+  height: 40%;
+  width: 90px;
+  margin-right: 80px;
+}
+.fa-up-down {
+  margin-left: 10px;
+}
+.fa-dollar-sign {
+  margin-right: 10px;
+}
+.advertisement {
+  background-color: rgb(19, 26, 34);
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  justify-content: center;
+  column-gap: 60px;
+  row-gap: 30px;
+  padding: 30px;
+}
+.advertisement > span > a > p {
+  color: rgb(255, 255, 255, 0.5);
+}
+.advertisement > span > a > h5 {
+  color: rgb(255, 255, 255, 0.7);
+  line-height: 15px;
+}
+.advertisement > span:nth-of-type(29) {
+  grid-column: 3/4;
+}
+.advertisement > span > a > h5 > p {
+  color: rgb(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+/* .advertisement > span:nth-of-type(30) {
+  grid-column: 4/5;
+}
+.advertisement > span:nth-of-type(31) {
+  grid-column: 5/6;
+} */
+.advertisement > span > a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 255, 255, 0.5);
+}
+
+.end {
+  background-color: rgb(19, 26, 34);
+  color: rgb(255, 255, 255, 0.8);
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 13px;
+}
